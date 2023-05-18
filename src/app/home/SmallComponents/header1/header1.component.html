@@ -1,0 +1,29 @@
+<mat-toolbar class="left-header">
+    <button 
+        type="button" 
+        (click)="drawer.toggle()" 
+        style="margin-right: 10px" 
+        mat-icon-button
+    >
+        <div 
+            mat-card-avatar 
+            style="background-image: url('{{user2.photoURL}}');"
+            referrerpolicy="no-referrer"
+            class="profile-image"
+        ></div>
+    </button>
+
+    <span>{{ user.displayName }} #{{ user.uid.slice(0, 5) }}</span>
+
+    <div class="more-options-button">
+        <button 
+            mat-icon-button 
+            [matMenuTriggerFor]="menu"
+        ><mat-icon>more_vert</mat-icon>
+        </button>
+
+        <mat-menu #menu="matMenu">
+            <button class="menuButtons" routerLink=""><b>Log Out</b></button>
+        </mat-menu>
+    </div>
+</mat-toolbar>

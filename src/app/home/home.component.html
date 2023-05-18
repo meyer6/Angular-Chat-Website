@@ -1,0 +1,33 @@
+<table *ngIf="homeService.loadCompleted">
+    <tr class="main-row">
+        <mat-drawer-container autosize class="left-section">
+            <mat-drawer #drawer mode="over" class="popup-window">
+                <app-sidebar 
+                    [drawer]="drawer" 
+                    [user]="homeService.user"
+                    [user2]="homeService.user2"
+                    ></app-sidebar>
+            </mat-drawer>
+
+            <td class="left-main-section">
+                <app-header1 [drawer]="drawer" [user]="homeService.user" [user2]="homeService.user2"></app-header1>
+
+                <app-chats-list 
+                    [chats]="homeService.chats"
+                    [user]="homeService.user"
+                    [user2]="homeService.user2"
+                    [chatNumber]="chatNumber"
+                    (chatNumberEvent)="changeChatNumber($event)"
+                ></app-chats-list>
+            </td>
+        </mat-drawer-container>
+
+        <td class="right-section">
+            <app-chat-window 
+                [user]="homeService.user" 
+                [chat]="homeService.chats[chatNumber]"
+                [chatId]="homeService.chatIds[chatNumber]">
+            </app-chat-window>
+        </td>
+    </tr>
+  </table>

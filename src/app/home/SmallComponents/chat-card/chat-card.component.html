@@ -1,0 +1,28 @@
+<mat-card class="card">
+    <mat-card-header style="display:flex; flex-direction: row; justify-content: center;">
+        <img 
+            mat-card-avatar 
+            src="{{chat.logo}}"
+            style="background-size: cover;"
+            referrerpolicy="no-referrer"
+        >
+        <div style="margin-left: 10px; margin-top: -5px; display: grid;">
+            <mat-card-title class="no-overflow" style="margin-bottom: -16px;" align="left">{{chat.name}}</mat-card-title>
+            <mat-card-subtitle class="no-overflow" align="left">
+                <small>{{chat.messages.at(-1).message}} | {{chat.messages.at(-1).time}}</small>
+            </mat-card-subtitle>
+        </div>
+
+        <mat-card-actions style="margin-left: auto; padding-top: 0px;">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+
+            <mat-menu #menu="matMenu" >
+                <button class="menuButtons"><b>Leave</b></button><br>
+                <button class="menuButtons"><b>Mute</b></button>
+            </mat-menu>
+        </mat-card-actions>
+
+    </mat-card-header>
+</mat-card>

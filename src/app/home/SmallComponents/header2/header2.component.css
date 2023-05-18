@@ -1,0 +1,23 @@
+.header{
+    background-color: #354498; 
+    color: white; 
+    height: 64px
+}
+
+.icon{
+    background-size: cover; 
+    position: absolute; 
+    top: 4px; 
+    left: 4px 
+}
+
+.menuButtons {
+    width: 100%; 
+    border: 0px; 
+    height: 30px; 
+    background-color: white; 
+    font-size: 15px; 
+}
+.menuButtons:hover {
+    background-color: #e5e5e5;
+}

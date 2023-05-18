@@ -1,0 +1,18 @@
+.card {
+    width: 75%;
+    height: 45px;
+    margin-top: 10px;
+}
+
+.icon-button {
+    width: 24px;
+    height: 24px;
+    padding: 0px;
+    margin-right: 4px;
+    margin-top: -3px;
+    display: inline-flex ;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: transparent;
+}

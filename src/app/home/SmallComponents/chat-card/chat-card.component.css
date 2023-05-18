@@ -1,0 +1,30 @@
+.card{
+    width: 100%; 
+    background-color: transparent; 
+    border-width: 0px; 
+    border-color: transparent; 
+    box-shadow: none;
+    padding-top: 3px; 
+    padding-bottom: 3px; 
+}
+.card:hover {
+    background-color: #d6daf1;
+}
+
+.menuButtons {
+    width: 100%; 
+    border: 0px; 
+    height: 30px; 
+    background-color: white; 
+    font-size: 15px; 
+}
+
+.menuButtons:hover {
+    background-color: #e5e5e5;
+}
+
+.no-overflow{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: "----";
+}

@@ -1,0 +1,28 @@
+ .left-header{
+    background-color: #4a5cc0; 
+    color: white; 
+}
+
+.profile-image{
+    background-size: cover; 
+    position: absolute; 
+    top: 4px; 
+    left: 4px
+}
+
+.more-options-button{
+    margin-left: auto
+}
+
+.menuButtons {
+    width: 100%; 
+    border: 0px; 
+    height: 30px; 
+    background-color: white; 
+    font-size: 15px; 
+}
+
+.menuButtons:hover {
+    background-color: #e5e5e5;
+}
+

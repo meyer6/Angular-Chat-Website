@@ -1,0 +1,21 @@
+.text_input {
+    width: 76%;
+    margin-left: 12%;
+    background-color: transparent;
+}
+.background{
+    background-color: #354498; 
+    color: white;
+}
+.header{
+    font-size: 25px;
+    margin-bottom: auto; 
+    margin-top: auto;
+}
+.icon{
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    width: 18vw; 
+    height: 18vw;
+}

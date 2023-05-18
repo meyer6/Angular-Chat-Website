@@ -1,0 +1,33 @@
+.app-toolbar {
+    position: sticky;
+    position: -webkit-sticky; /* For macOS/iOS Safari */
+    top: 0; /* Sets the sticky toolbar to be on top */
+    z-index: 1000; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.main-row {
+    height: 99.3vh; 
+    border-width: 0px;
+}
+
+.left-section {
+    height: 99vh; 
+    background-color: #edeff9; 
+    margin-right: -3px;
+}
+
+.popup-window {
+    width: 30vw; 
+    background: #8994d6;
+}
+
+.left-main-section{
+    width: 30vw; 
+    display: inline-block;
+}
+
+.right-section{
+    width: 70vw; 
+    background: #F7F7FC
+}
+

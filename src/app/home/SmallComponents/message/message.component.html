@@ -1,0 +1,27 @@
+<div *ngIf="loadCompleted && message!=undefined">
+    <ng-template [ngIf]="message.senderId!=user.uid">
+        <div 
+            mat-card-avatar 
+            class="message-outer"
+            style="float: left; background-image: url({{logo}}); background-size: cover"
+        ></div>
+        <div class="message-inner message-inner-left">
+            <small style="float: right;">{{message.time}}</small>
+            <b>{{name}}ㅤ</b><br>{{message.message}}
+        </div>
+    </ng-template>
+
+    <ng-template [ngIf]="message.senderId==user.uid">
+        <div 
+            mat-card-avatar 
+            class="message-outer"
+            style="float: right; 
+            background-image: url({{logo}});
+            background-size: cover"
+        ></div>
+        <div class="message-inner message-inner-right">
+            <small style="float: right;">{{message.time}}</small>
+            <b>{{name}}ㅤ</b><br>{{message.message}}
+        </div>
+    </ng-template>
+</div>

@@ -1,0 +1,36 @@
+.background{
+    height: 99vh; 
+    position: relative; 
+    background-color: #f4f5fb;
+}
+
+.menuButtons:hover {
+    background-color: #e5e5e5;
+}
+
+.chat-window-outer{
+    width: 100%; 
+    position: absolute; 
+    bottom: 0px; 
+    display: grid
+}
+
+.chat-window-inner{
+    display: flex; 
+    flex-direction: column-reverse; 
+    overflow-y: auto; 
+    height: calc(99vh - 140px);
+}
+
+.search-bar{
+    background-color: #ccd1ed; 
+    padding: 10px; 
+    height: 54px;
+    display: flex;
+    justify-content: center;
+}
+
+.emoji {
+    position: relative;
+    bottom: 375px;
+}

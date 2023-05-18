@@ -1,0 +1,21 @@
+<mat-card class="card" *ngIf="loaded">
+    <mat-card-header style="display:flex; flex-direction: row;">
+        <img 
+            mat-card-avatar 
+            src="{{user2.photoURL}}"
+            referrerpolicy="no-referrer"
+            style="background-size: cover; width: 30px; height: 30px; float: left; margin-top: -7px"
+        >
+        <div style="margin-left: 10px; margin-top: -8px;">
+            <mat-card-title>{{user2.displayName}}</mat-card-title>
+        </div>
+        <div style="margin-left: auto;">
+            <button style="color: green;" class="icon-button" (click)="addFriend()">
+                <mat-icon>check_circle</mat-icon>
+            </button>
+            <button style="color: red; transform: rotate(45deg);" class="icon-button" (click)="remove()">
+                <mat-icon>add_circle</mat-icon>
+            </button>
+        </div>
+    </mat-card-header>
+</mat-card>

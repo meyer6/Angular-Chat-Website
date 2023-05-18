@@ -1,0 +1,36 @@
+<div *ngIf="user!=undefined"><mat-toolbar class="background">
+    <p class="header">Profile</p>
+    <div style="margin-left: auto">
+        <button 
+            type="button" 
+            (click)="drawer.toggle()" 
+            style="margin-left: auto" 
+            mat-icon-button
+        >
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+</mat-toolbar>
+
+<div 
+    mat-card-avatar 
+    class="icon"
+    style="background-image: url('{{ user2.photoURL }}'); background-size: cover; border-radius: 50%;"
+    referrerpolicy="no-referrer"
+></div>
+<div >
+    <mat-form-field class="text_input">
+        <mat-label>Profile Picture Link</mat-label>
+        <input matInput placeholder="{{ user2.photoURL }}" [formControl]="photoURL" (keydown.enter)="changePhoto()">  
+    </mat-form-field>
+
+    <mat-form-field class="text_input">
+        <mat-label>Name</mat-label>
+        <input matInput value="{{ user2.displayName }}" readonly>  
+    </mat-form-field>
+
+    <mat-form-field class="text_input">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" value="{{ user.email }}" readonly>  
+    </mat-form-field>
+</div></div>

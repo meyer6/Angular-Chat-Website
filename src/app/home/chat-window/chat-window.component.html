@@ -1,0 +1,32 @@
+<div class="background">
+    <app-header2 *ngIf="chat!=undefined" [name]="chat.name" [logo]="chat.logo"></app-header2>
+    <div class="chat-window-outer">
+        <div class="chat-window-inner">
+            <div *ngIf="chat!=undefined" style="display: grid;">
+                <div *ngFor="let message of chat.messages">
+                    <app-message 
+                        [message]="message" 
+                        [user]="user">
+                    </app-message>
+                </div>
+            </div>
+            <div *ngIf="chat==undefined" style="margin: auto; color: #4a5cc0; font-size: 30px"><b> No Chats </b></div>
+        </div>
+
+        <div class="search-bar">
+            <emoji-mart class="emoji-mart emoji" *ngIf="isEmojiPickerVisible" (emojiSelect)="addEmoji($event)" title="Choose your emoji"></emoji-mart>
+            <button type="button" mat-icon-button style="margin-top: 4px" (click)="isEmojiPickerVisible = !isEmojiPickerVisible;">
+                <mat-icon>tag_faces</mat-icon>
+            </button>
+
+            <mat-form-field subscriptSizing="dynamic" style="min-width: 30px; width: calc(100% - 40px);">
+                <mat-label>Write a message</mat-label>
+                <input matInput [formControl]="message" (keydown.enter)="sendMessage()">
+                
+                <button type="submit" (click)="sendMessage()" mat-icon-button matSuffix >
+                    <mat-icon>send</mat-icon>
+                </button>
+            </mat-form-field>
+        </div>
+    </div>
+</div>

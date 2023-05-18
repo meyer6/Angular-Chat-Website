@@ -1,0 +1,41 @@
+.chat-type-toggle {
+    min-width: 33%;
+    width: 33%
+}
+
+.input-field-left{
+    width: 48%;
+    margin-left: 12%;
+    margin-top: 15px
+}
+
+.input-field-right{
+    width: 24%;
+    margin-left: 10px;
+    margin-top: 15px
+}
+
+.break-line{
+    width: 75%; 
+    height: 1px; 
+    background: #4a5cc0; 
+    margin: auto;
+}
+
+.outer-button{
+    width: 100%; 
+    background-color: transparent; 
+    border-width: 0px;
+}
+
+.break-line{
+    width: 95%; 
+    height: 1.5px; 
+    background: #4a5cc0; 
+    margin: auto;
+}
+.create-group-button {
+    font-size: 16px; 
+    color: #4a5cc0;
+    margin-top: 10px
+}

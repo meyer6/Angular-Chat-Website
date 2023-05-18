@@ -1,0 +1,86 @@
+<div class="background">
+    <mat-card class="center-screen card">
+        <mat-card-content style="padding-bottom: 9px;">
+            <form>
+                <mat-form-field class = "input-box">
+                    <mat-label>Email</mat-label>
+                    <input 
+                        matInput 
+                        type="email" 
+                        [formControl]="user.email" 
+                        placeholder="Ex. example@gmail.com"
+                    >
+
+                    <mat-error *ngIf="user.email.hasError('email') && !user.email.hasError('required')">
+                        Please enter a valid email address
+                    </mat-error>
+
+                    <mat-error *ngIf="user.email.hasError('required')">
+                        Email is required
+                    </mat-error>  
+                </mat-form-field>
+
+                <br>
+
+                <mat-form-field class = "input-box">
+                    <mat-label>Enter your password</mat-label>
+                    <input 
+                        matInput [formControl]="user.password" 
+                        matInput [type]="hide ? 'password' : 'text'"
+                    >
+
+                    <mat-error 
+                        *ngIf="user.password.hasError('required')"
+                    >
+                        Password is required
+                    </mat-error>
+
+                    <button 
+                        class = "show-password-button"
+                        type="button"
+                        mat-icon-button 
+                        matSuffix 
+                        (click)="hide = !hide" 
+                        [attr.aria-pressed]="hide"
+                    >
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+
+                </mat-form-field>
+
+                <mat-error *ngIf="accountService.errorMessage == 'emailNotFound'">
+                    Email does not exists
+                </mat-error>
+                <mat-error *ngIf="accountService.errorMessage == 'wrongPassword'">
+                    Incorrect Password
+                </mat-error>
+
+                <br>
+                    <!-- routerLink="/home"  -->
+
+                <button 
+                    class="login-button"
+                    mat-raised-button 
+                    color="primary"
+                    type="button"
+                    (click)="accountService.SignIn(user.email.value, user.password.value)"
+                >
+                    <strong>Sign In</strong>
+                </button>
+
+                <div class="separator">or</div>
+
+                <button mat-button class="google-button" type="button"
+                    (click)="accountService.GoogleAuth()"
+                >
+                    <img class="google-image"
+                    src="https://raw.githubusercontent.com/fireflysemantics/logo/master/Google.svg"/> 
+                    <div class="google-text">Continue With Google</div>
+                </button><br>
+                 
+                <a routerLink="">Create Account</a>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
+<!-- <a [routerLink] = "['/chat', user.email.value]" >hello</a> -->
