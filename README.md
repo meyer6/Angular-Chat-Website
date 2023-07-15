@@ -1,6 +1,6 @@
 # ChatApp
-Chat app created in angular \\
-Uses firebase for backend 
+Chat app created in angular - https://chat-app-a965e.web.app/<br/>
+Uses firebase for backend <br/><br/>
 
 Sign In Page
 ![image](https://github.com/meyer6/Angular-Chat-Website/assets/69467554/96f37333-dda0-46cc-a3b1-20c87e9564fe)
